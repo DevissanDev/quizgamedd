@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "icono": "🏆",
+    "nombre": "Ana Martínez",
+    "puntaje_total": 1200
+  },
+  {
+    "id": 2,
+    "icono": "🎯",
+    "nombre": "Carlos Gómez",
+    "puntaje_total": 950
+  },
+  {
+    "id": 3,
+    "icono": "🔥",
+    "nombre": "Laura Sánchez",
+    "puntaje_total": 1120
+  },
+  {
+    "id": 4,
+    "icono": "⭐",
+    "nombre": "David Ruiz",
+    "puntaje_total": 875
+  },
+  {
+    "id": 5,
+    "icono": "💡",
+    "nombre": "María López",
+    "puntaje_total": 1025
+  }
+]
