@@ -3,7 +3,7 @@
     "id": 1,
     "pregunta": "¿Cuál es el planeta más cercano al Sol?",
     "opciones": ["Venus", "Mercurio", "Marte", "Tierra"],
-    "respuesta_correcta": "Mercurio"
+    "respuesta_correcta": 1
   },
   {
     "id": 2,
@@ -14,24 +14,24 @@
       "Jorge Luis Borges",
       "Mario Vargas Llosa"
     ],
-    "respuesta_correcta": "Gabriel García Márquez"
+    "respuesta_correcta": 0
   },
   {
     "id": 3,
     "pregunta": "¿Cuál es el resultado de 9 x 7?",
     "opciones": ["56", "63", "72", "49"],
-    "respuesta_correcta": "63"
+    "respuesta_correcta": 1
   },
   {
     "id": 4,
     "pregunta": "¿En qué continente está Egipto?",
     "opciones": ["Asia", "Europa", "África", "Oceanía"],
-    "respuesta_correcta": "África"
+    "respuesta_correcta": 2
   },
   {
     "id": 5,
     "pregunta": "¿Cuál es el elemento químico con símbolo O?",
     "opciones": ["Oro", "Osmio", "Oxígeno", "Oganesón"],
-    "respuesta_correcta": "Oxígeno"
+    "respuesta_correcta": 2
   }
 ]
