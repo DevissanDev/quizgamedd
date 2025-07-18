@@ -2,9 +2,13 @@ import { Botton, Lista, TuNombre } from "../../components";
 import participante from "../../assets/participante.json";
 import { useState } from "react";
 
-export function Inicio({ metodoComenzarJuego, metodoActivar, activo }) {
-  const [nombre, setNombre] = useState("");
-
+export function Inicio({
+  metodoComenzarJuego,
+  metodoActivar,
+  activo,
+  nombre,
+  setNombre,
+}) {
   const metodoCambiarNombre = () => {
     let nuevoNombre = document.querySelector("#nombre").value;
     setNombre(nuevoNombre);

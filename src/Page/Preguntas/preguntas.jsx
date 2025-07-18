@@ -2,9 +2,14 @@ import { useState, useEffect } from "react";
 import preguntas from "../../assets/preguntas.json";
 import { Botton } from "../../components";
 
-export function Preguntas() {
-  const [preguntaNumero, setPreguntaNumero] = useState(0);
-  const [puntaje, setPuntaje] = useState(0);
+export function Preguntas({
+  preguntaNumero,
+  setPreguntaNumero,
+  puntaje,
+  setPuntaje,
+  setFinal,
+  final,
+}) {
   const [boto, setBoto] = useState(false);
   let segundosTrascurridos = 0;
 
@@ -18,6 +23,12 @@ export function Preguntas() {
   const cambiarPregunta = () => {
     setPreguntaNumero(preguntaNumero + 1);
     setBoto(false);
+    console.log(`Pregunta numero: ${preguntaNumero + 1}`);
+    console.log(preguntas.length);
+    if (preguntaNumero + 1 >= preguntas.length) {
+      setFinal(true);
+      console.log("Juego terminado, reiniciando...");
+    }
   };
   const caculaPuntaje = (indexSeleccionado) => {
     if (
@@ -36,30 +47,32 @@ export function Preguntas() {
     metodoComenzarJuego();
   }, [preguntas[preguntaNumero]]);
 
-  return (
-    <div className="preguntas">
-      <h1>{preguntas[preguntaNumero].pregunta}</h1>
-      <h3>{puntaje}</h3>
-      <div>
-        {preguntas[preguntaNumero].opciones.map((respuestas, index) => (
-          <div
-            id={index}
-            onClick={() => caculaPuntaje(index)}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              backgroundColor: "black",
-              textAlign: "center",
-              alignItems: "center",
-              margin: "10px",
-            }}
-            key={index}
-          >
-            <p style={{ textAlign: "center", width: "100%" }}>{respuestas}</p>
-          </div>
-        ))}
+  if (final === false) {
+    return (
+      <div className="preguntas">
+        <h1>{preguntas[preguntaNumero].pregunta}</h1>
+        <h3>{puntaje}</h3>
+        <div>
+          {preguntas[preguntaNumero].opciones.map((respuestas, index) => (
+            <div
+              id={index}
+              onClick={() => caculaPuntaje(index)}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                backgroundColor: "black",
+                textAlign: "center",
+                alignItems: "center",
+                margin: "10px",
+              }}
+              key={index}
+            >
+              <p style={{ textAlign: "center", width: "100%" }}>{respuestas}</p>
+            </div>
+          ))}
+        </div>
+        <Botton label="Cambiar" metodo={cambiarPregunta} />
       </div>
-      <Botton label="Cambiar" metodo={cambiarPregunta} />
-    </div>
-  );
+    );
+  }
 }
