@@ -8,7 +8,6 @@ function App() {
   const [preguntaNumero, setPreguntaNumero] = useState(0);
   const [puntaje, setPuntaje] = useState(0);
   const [final, setFinal] = useState(false);
-  const [nombre, setNombre] = useState("");
 
   const comenzarJuego = () => {
     setComenzo(true);
@@ -30,7 +29,7 @@ function App() {
     );
   }
   if (final === true) {
-    return <Resultado puntaje={puntaje} nombre={nombre} />;
+    return <Resultado puntaje={puntaje} />;
   }
   return (
     <>
@@ -38,8 +37,6 @@ function App() {
         metodoComenzarJuego={comenzarJuego}
         metodoActivar={Activar}
         activo={activo}
-        nombre={nombre}
-        setNombre={setNombre}
       />
     </>
   );

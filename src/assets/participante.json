@@ -1,32 +1,32 @@
 [
   {
-    "id": 1,
-    "icono": "🏆",
-    "nombre": "Ana Martínez",
-    "puntaje_total": 1200
+    "Id": 1,
+    "Icono": "🏆",
+    "Nombre": "Ana Martínez",
+    "Puntaje_Total": 1200
   },
   {
-    "id": 2,
-    "icono": "🎯",
-    "nombre": "Carlos Gómez",
-    "puntaje_total": 950
+    "Id": 2,
+    "Icono": "🎯",
+    "Nombre": "Carlos Gómez",
+    "Puntaje_Total": 950
   },
   {
-    "id": 3,
-    "icono": "🔥",
-    "nombre": "Laura Sánchez",
-    "puntaje_total": 1120
+    "Id": 3,
+    "Icono": "🔥",
+    "Nombre": "Laura Sánchez",
+    "Puntaje_Total": 1120
   },
   {
-    "id": 4,
-    "icono": "⭐",
-    "nombre": "David Ruiz",
-    "puntaje_total": 875
+    "Id": 4,
+    "Icono": "⭐",
+    "Nombre": "David Ruiz",
+    "Puntaje_Total": 875
   },
   {
-    "id": 5,
-    "icono": "💡",
-    "nombre": "María López",
-    "puntaje_total": 1025
+    "Id": 5,
+    "Icono": "💡",
+    "Nombre": "María López",
+    "Puntaje_Total": 1025
   }
 ]

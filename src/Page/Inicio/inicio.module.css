@@ -1,0 +1,46 @@
+.inicio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fomrulario {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(43, 43, 43);
+  gap: 1rem;
+  box-sizing: border-box;
+  height: 10rem;
+}
+
+.fomrulario > input {
+  box-sizing: border-box;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  background-color: rgba(214, 214, 214, 0.301);
+  text-align: center;
+  transition: border 0.2s; /* opcional para suavizar */
+}
+.bienvenida {
+  height: 10rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 2rem;
+  background-color: rgb(43, 43, 43);
+  border-radius: 1rem;
+  gap: 1rem;
+}
+.bienvenida > h2 {
+  margin: 0rem;
+}
+
+.fomrulario > input:focus {
+  outline: none;
+}

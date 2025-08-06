@@ -1,0 +1,39 @@
+.lista {
+  margin-top: 2rem;
+  border: 0.1rem solid #727272;
+  border-bottom: 0.2rem solid #727272;
+  box-sizing: border-box;
+}
+.tabla {
+  height: 15rem;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+.titulo {
+  border: 0.2rem solid #727272;
+  border-bottom: none;
+  padding: 1rem;
+}
+
+th[colspan] {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 0.2rem solid #727272;
+  padding: 0.5rem 2rem;
+  text-align: center;
+}
+
+thead {
+}
+h3 {
+  margin: 0;
+}

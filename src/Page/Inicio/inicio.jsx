@@ -1,14 +1,12 @@
 import { Botton, Lista, TuNombre } from "../../components";
 import participante from "../../assets/participante.json";
-import { useState } from "react";
+import styles from "./inicio.module.css";
+import { useContext } from "react";
+import { counterContext } from "../../context/counterContex";
 
-export function Inicio({
-  metodoComenzarJuego,
-  metodoActivar,
-  activo,
-  nombre,
-  setNombre,
-}) {
+export function Inicio({ metodoComenzarJuego, metodoActivar, activo }) {
+  const { nombre, setNombre } = useContext(counterContext);
+
   const metodoCambiarNombre = () => {
     let nuevoNombre = document.querySelector("#nombre").value;
     setNombre(nuevoNombre);
@@ -17,22 +15,27 @@ export function Inicio({
   };
 
   return (
-    <div className="inicio">
-      <TuNombre nombre={nombre} />
-      <h3>{`estas activo: ${activo}`}</h3>
-      <h1>JUEGO ZZZ</h1>
-      <Botton label="Comenzar" metodo={metodoComenzarJuego} />
+    <div className={styles.inicio}>
+      <h1>QUIZZ GAME</h1>
+      {!activo ? (
+        <div className={styles.fomrulario}>
+          <input type="text" id="nombre" placeholder="NOMBRE" />
+          <Botton
+            label="GUARDAR"
+            metodo={() => {
+              metodoCambiarNombre();
+              metodoActivar();
+            }}
+          />
+        </div>
+      ) : (
+        <div className={styles.bienvenida}>
+          <h2>{`Bienvenido ${nombre}`}</h2>
+          <Botton label="Comenzar" metodo={metodoComenzarJuego} />
+        </div>
+      )}
+
       <Lista tabla={participante} nombre="Participantes" />
-      <div>
-        <input type="text" id="nombre" />
-        <Botton
-          label="GUARDAR"
-          metodo={() => {
-            metodoCambiarNombre();
-            metodoActivar();
-          }}
-        />
-      </div>
     </div>
   );
 }

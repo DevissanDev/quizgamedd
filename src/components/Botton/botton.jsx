@@ -1,11 +1,9 @@
-export function Botton({label, metodo}) {
+import style from "./botton.module.css";
+
+export function Botton({ label, metodo }) {
   return (
-    <button
-      className="botton"
-      onClick={metodo}
-    >
+    <button className={style.botton} onClick={metodo}>
       {label}
     </button>
   );
-
 }
